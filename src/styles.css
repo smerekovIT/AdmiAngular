@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+button {
+	 background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+

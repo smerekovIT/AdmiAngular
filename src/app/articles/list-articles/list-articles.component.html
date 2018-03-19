@@ -1,0 +1,9 @@
+<ul *ngFor='let article of articles$ | async'>
+	<li routerLink='../details/{{article.id}}'>
+		<span>{{article.title}}</span>
+		 Автор:  {{article.author | idAuthorTransformNameAuthor}}
+	</li>
+</ul>
+
+  <button routerLink='../create'>Создать</button>
+

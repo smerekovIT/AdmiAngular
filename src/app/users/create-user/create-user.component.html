@@ -1,0 +1,31 @@
+<div>
+  <label>Введите псевдоним:</label>
+  <input type="text" 
+       name='author'
+       [(ngModel)]='author'>
+
+<label>Имя:</label>
+  <input type="text" 
+       name='name'
+       [(ngModel)]='name'>
+
+<label>Фамилия:</label>
+       <input type="text" 
+       name='surname'
+       [(ngModel)]='surname'>
+
+<label>Почта:</label>
+       <input type="email" 
+       name='email'
+       [(ngModel)]='email'>
+
+<label> Адрес:</label>
+       <input type="text" 
+       name='address'
+       [(ngModel)]='address'>
+
+
+  <button (click)='createUserBtnClick(name, author, surname, email, address)' routerLink='../list'>Создать</button>
+</div>
+    
+   

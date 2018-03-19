@@ -1,0 +1,56 @@
+<div *ngIf='article'>
+
+  <label>Заголовок</label>
+
+  <input type="text" 
+      [(ngModel)]='article.title'
+      placeholder="title">
+
+  <label>Статья</label>
+    
+  <textarea cols="30" rows="10" [(ngModel)] = 'article.body'>
+      {{article.body}}
+  </textarea>
+
+  <label>Автор статьи</label>
+
+  <input type="text"
+      [(ngModel)]='article.author'>
+
+
+  <button (click)='updateArticleBtnClick(article.id, article.title, article.body, article.author)' 
+        routerLink='../../details/{{article.id}}'> Изменить
+  </button>
+</div>
+
+
+
+
+<div *ngIf='!article'>
+
+  <label>Заголовок</label>
+
+  <input type="text" 
+         name='title'
+        [(ngModel)]='title'
+       #titleArticle>
+      
+  <label>Статья</label>
+
+  <textarea  name='body' cols="30" rows="10" [(ngModel)]='body' #bodyArticle></textarea>
+
+  <label>Автор статьи</label>
+
+  <input type="text"
+      name="author" 
+      [(ngModel)]='author' #authorArticle>
+
+
+
+    
+    
+  <button (click)='addArticleBtnClick(title, body, author)' 
+            routerLink='../list'>Создать</button>
+     
+</div>
+

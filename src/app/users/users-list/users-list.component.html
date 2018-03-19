@@ -1,0 +1,6 @@
+<div *ngFor='let user of users'>
+<p>{{user.author}}</p>
+<button routerLink='../detail/{{user.id}}'>Подробней</button>
+</div>
+
+<button routerLink='../create'>Создать</button>
