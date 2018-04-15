@@ -13,6 +13,7 @@ import { ArticleService } from './article.service';
 import { UserService } from '../users/user.service'
 
 import { ArticleRoutingModule } from './article-routing.module';
+import { SearchArticlesComponent } from './search-articles/search-articles.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { ArticleRoutingModule } from './article-routing.module';
 
     
   ],
-  declarations: [ListArticlesComponent, DetailsArticlesComponent, CreateArticleComponent],
+  declarations: [ListArticlesComponent, DetailsArticlesComponent, CreateArticleComponent, SearchArticlesComponent],
   providers: [ArticleService, UserService]
 })
 export class ArticlesModule { }

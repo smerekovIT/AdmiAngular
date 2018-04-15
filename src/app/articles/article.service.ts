@@ -15,6 +15,13 @@ export class ArticleService {
 Articles: Article[] = ARTICLES;
   constructor() { }
 
+  searchArticle(term: string): Observable<Article[]>{
+    let re = new RegExp(term, 'i')
+    if(!term.trim()){
+      return of([])
+    }
+    return of(this.Articles.filter(c => c.title.match(re)))
+  }
 
   getArticles(): Observable<Article[]> {
     return of(this.Articles)
